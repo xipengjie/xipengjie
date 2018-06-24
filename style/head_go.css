@@ -1,0 +1,297 @@
+a{
+	text-decoration: none;
+	color: #000000;
+}
+li{
+	list-style: none;
+}
+em{
+	font-style:normal;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+.Nav_1{
+	width: 100%;
+	float: left;
+}
+.Nav_2{
+	background: #3e3a39;
+}
+#topNav{
+	width: 1200px;
+	height: 31px;
+	background: #3e3a39;
+	margin: 0 auto;
+
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/iconfont.woff') format('woff'),
+  url('../fonts/iconfont.ttf') format('truetype'),
+  url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.app{
+	height: 30px;
+	float: left;
+	
+}
+ .app em{
+ 	display: block;
+	font-family: iconfont;
+	font-size: 5px;
+	color: #FFFFFF;
+	width: 9px;
+	height: 6px;
+	line-height: 5px;
+	float: left;
+	margin-top: 13px;	
+	margin-left: 10px;
+}
+.app>img{
+	display: block;
+	width: 12px;
+	height: 12px;
+	float: left;
+	margin-top: 8px;
+}
+.app>a{
+	display: block;
+	font-size: 12px;
+	color: #CCCCCC;
+	line-height: 30px;
+	cursor: pointer;
+	float: left;
+	margin-left: 8px;
+}
+.app_ewm{
+	transform: rotate(180deg);
+	transition:all 1s;
+	transform-origin:50% 50%
+}
+.app_ewm2{
+	transform: rotate(0deg);
+	transition:all 1s;
+	transform-origin:50% 50%
+}
+.list li{
+	float: left;
+	margin-right: 20px;
+}
+.list_nav:hover a{
+	color: #666666;
+}
+.list{
+	float: right;
+}
+.list .list_a{
+	width: 1px;
+	height: 12px;
+	margin-top: 9px;
+	background: #dddddd;
+}
+.login{
+	color: #CCCCCC;
+	font-size: 12px;
+	line-height: 30px;
+}
+.login>a{
+	font-size: 12px;
+	color: #fff600;
+}
+.login>em{
+	margin-right: 10px;
+}
+.list_nav>a{
+	font-size: 13px;
+	color: #CCCCCC;
+	display: block;
+	line-height: 30px;
+}
+.list_tel>a{
+	font-size: 12px;
+	color: #CCCCCC;
+	display: block;
+	line-height: 30px;
+}
+.list_tel a  em{
+	font-family: iconfont;
+	font-size: 15px;
+}
+.app_QR{
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	display: none;
+}
+.app_QR>span{
+	display: block;
+	width: 0;
+	height: 0;
+	border-bottom: 9px solid #FFFFFF;
+	border-right: 10px solid red;
+	border-left: 10px solid #FFFFFF;
+	position: relative;
+	top: 2px;
+}
+.app_QR>img{
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+
+
+
+
+#topAD{
+	width: 1200px;
+	margin: 0 auto;
+}
+#topAD img{
+	display: block;
+}
+
+#topSS{
+	width: 1200px;
+	height: 90px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#topSS>a>img{
+	display: block;
+	margin-top: 35px;
+	float: left;
+}
+.topSS_gif>a>img{
+	display: block;
+	float: left;
+	margin-top: 30px;
+	margin-left: 62px;
+}
+
+
+
+#seek{
+	width: 450px;
+	height: 60px;
+	float: left;
+	margin-left: 80px;
+	margin-top: 30px;
+}
+#seek form{
+	width: 442px;
+	height: 40px;
+}
+
+#seek_txt{
+	float: left;
+	width: 344px;
+	height: 33px;
+	border: 3px solid #c40000;
+}
+#seek_btn{
+	float: left;
+	width: 86px;
+	height: 39px;
+	background: #c40000;
+	border: none;
+	font-size: 16px;
+	color: #FFFFFF;
+	line-height: 40px;
+	text-align: center;
+}
+.seek_list{
+	margin-top: 3px;
+}
+.seek_list li{
+	float: left;
+}
+
+.seek_list li a{
+	display: block;
+	font-size: 12px;
+	color: #e8937f;
+	height: 15px;
+	padding: 0 10px;
+	border-right: 1px solid #e8937f;
+}
+
+#cart{
+	float: left;
+	width: 141px;
+	height: 36px;
+	border: 1px solid #dfdfdf;
+	margin-left: 50px;
+	margin-top: 34px;
+	position: relative;
+}
+#cart>a>em{
+	font-family: iconfont;
+	font-size: 22px;
+	color: #e63736;
+	line-height: 32px;
+	margin-left: 5px;
+}
+#cart a span:nth-of-type(1){
+	color: #666666;
+	font-size:13px;
+	line-height: 32px;
+}
+#cart a span:nth-of-type(2){
+	font-family: iconfont;
+	color: #cccccc;
+	font-size: 12px;
+	line-height: 32px;
+}
+.cart_num{
+	width: 30px;
+	height: 30px;
+	background: url(../img/qipao.png) no-repeat;
+	position: absolute;
+	top: -22px;
+	left: 3px;
+	font-size: 10px;
+	color: #FFFFFF;
+	line-height: 30px;
+	text-align: center;
+}
+
+
+#nav{
+	width: 1200px;
+	height: 45px;
+	margin: 0 auto;
+}
+.nav_list>li{
+	float: left;
+	height: 45px;
+	padding: 0 25px;
+}
+.nav_list_etc{
+	line-height: 45px;
+	color: #333333;
+	font-size: 15px;
+}
+.nav_list_all{
+	width: 135px;
+	height: 45px;
+	background: red;
+	position: relative;
+}
+.nav_list_all a{
+	font-size: 17px;
+	color: #FFFFFF;
+	font-family: iconfont;
+	line-height: 45px;
+}
+
+.nav_list_etc:hover a{
+	color: #9d0505;
+}
+.nav_gif{
+	float: right;
+}
+
