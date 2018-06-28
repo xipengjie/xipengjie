@@ -2,9 +2,10 @@ $(function(){
 		var goodsid = location.search.split("=")[1];
 		$.getJSON("http://datainfo.duapp.com/shopdata/getGoods.php?callback=?",{goodsID:goodsid},function(data){
 			var str = "<img src="+data[0].goodsListImg+" >";
-			var str6= "<img src="+data[0].goodsListImg+" >";
+			var str6= "<img src="+data[0].goodsListImg+" ><div id='zoom' style='background-image:url("+data[0].goodsListImg+")'></div>";
 			$(".detail_img").html(str6);
 			$("#right").html(str);
+
 			var str1 = "<p class='detail_p'>"+data[0].goodsName+"</p>";
 			$(".detail_title").html(str1);
 			var str2 = "<p class='detail_price'><span>活动价￥</span>"+data[0].price+"</p>";
@@ -21,8 +22,30 @@ $(function(){
 						alert("添加成功");
 					}
 				})
-			})
-		});
+			});
+			var top=$(".detail_img img").position().top;
+			var left=$(".detail_img img").position().left;
+			console.log($(".detail_img img").position())
+			$(".detail_img img").mousemove(function(e){
+				$("#zoom").css({
+					"top":e.clientY-130+"px",
+					"left":e.clientX-120+"px",
+					"background-size":"840px 840px",
+					"background-repeat":"no-repeat",
+					"background-position":"-"+(e.clientX-left+50)+"px -"+(e.clientY-top+100)+"px",
+					"transform":"scale(1.5,1.5)"
+				});
+			});	
+			$(".detail_img img").mouseover(function(){
+         		$("#zoom").show();
+ 	    	});
+ 	    	$(".detail_img1 img").mouseout(function(){
+         		$("#zoom").hide();
+         	});
+
+	     	});
+
+	     
 	});
 /*left2.onmouseover = function(){
         right2.style.display = "block";
