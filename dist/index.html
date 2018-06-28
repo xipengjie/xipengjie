@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/main.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 	</head>
 	<body>
 	<div class="Nav_1  Nav_2">
@@ -23,8 +24,8 @@
 				<ul class="list">
 					<li class="login">
 						<em>Hi,请</em>
-						<a href="#">登录</a> /
-						<a href="#">注册</a>
+						<a href="logging.html">登录</a> /
+						<a href="login.html">注册</a>
 					</li>
 					<li class="list_a"></li>
 					<li class="list_nav"><a href="#">我的订单</a></li>
@@ -57,7 +58,7 @@
 	</div>
 	<div class="Nav_1">
 		<div id="topSS">
-			<a href="#">
+			<a href="index.html">
 				<img src="img/logo1.jpg"/>
 			</a>
 			<div class="topSS_gif">
@@ -67,7 +68,8 @@
 			</div>
 			<div id="seek">
 				<form>
-					<input type="text" name="txt" id="seek_txt" placeholder="茅台飞天" />
+					<input type="text" name="txt" id="seek_txt" placeholder="茅台飞天" autocomplete="off" />
+					<ul id="sousuo"></ul>
 					<input type="button"  id="seek_btn" value="搜索"/>
 				</form>
 				<ul class="seek_list">
@@ -82,13 +84,10 @@
 				</ul>
 			</div>
 			<div id="cart">
-				<a href="#">
+				<a href="cart.html">
 					<em>&#xe63f;</em>
 					<span>去购物车结算</span>
 					<span>&#xe65f;</span>
-					<div class="cart_num">
-						0
-					</div>
 				</a>
 			</div>
 		</div>	
@@ -99,66 +98,7 @@
 				<li class="nav_list_all">
 					<a href="#">&#xe655;&nbsp; 全部分类</a>
 					<ul class="nav_list_sub">
-						<li>
-							<em>&#xe643;</em>
-							<a href="#">&nbsp;一键选购</a>
-							<span>&#xe65f;</span>
-							<div></div>
-						</li>
-						<li>
-							<em>&#xe5b2;</em>
-							<a href="#">&nbsp; 白酒</a>
-							<span>&#xe65f;</span>
-							<div></div>
-						</li>
-						<li>
-							<em>&#xe606;</em>
-							<a href="#">&nbsp; 葡萄酒</a>
-							<span>&#xe65f;</span>
-							<div></div>
-						</li>
-						<li>
-							<em>&#xe61b;</em>
-							<a href="#">&nbsp; 洋酒</a>
-							<span>&#xe65f;</span>
-							<div></div>
-						</li>
-						<li>
-							<em>&#xe615;</em>
-							<a href="#">&nbsp; 黄酒</a>
-							<span>&#xe65f;</span>
-							<div></div>
-						</li>
-						<li>
-							<em>&#xe62f;</em>
-							<a href="#">&nbsp; 清酒</a>
-							<span>&#xe65f;</span>
-							<div></div>
-						</li>
-						<li>
-							<em>&#xe618;</em>
-							<a href="#">&nbsp; 啤酒</a>	
-							<span>&#xe65f;</span>
-							<div></div>
-						</li>
-						<li>
-							<em>&#xe614;</em>
-							<a href="#">&nbsp; 酒具周边</a>
-							<span>&#xe65f;</span>
-							<div></div>
-						</li>
-						<li>
-							<em>&#xe64d;</em>
-							<a href="#">&nbsp; 新品</a>
-							<span>&#xe65f;</span>
-							<div></div>
-						</li>
-						<li>
-							<em>&#xe632;</em>
-							<a href="#">&nbsp; 清仓</a>
-							<span>&#xe65f;</span>
-							<div></div>
-						</li>
+						
 					</ul>
 				</li>
 				<li class="nav_list_etc"><a href="#">首页</a></li>
@@ -241,7 +181,7 @@
 	<!--main-->
 	<div id="main">
 		<div class="main">
-			<ul class="main_box">
+			<ul class="main_box du">
 				<li>
 					<a href="#">
 						<img src="img/d.jpg"/>
@@ -280,7 +220,7 @@
 					</a>
 				</li>
 			</ul>
-			<ul class="main_box  main_box2">
+			<ul class="main_box  main_box2 du">
 				<li>
 					<a href="#">
 						<img src="img/f.jpg" alt="" />
@@ -353,7 +293,7 @@
 					</a>
 				</div>
 				<div class="mt_right">
-					<ul>
+					<ul class="du">
 						<li>
 							<a href="#">
 								<div class="mt_right_head">酱酒世家</div>
@@ -441,7 +381,7 @@
 						</a>
 					</div>
 					<div class="nf_right mt_right">
-							<ul>
+							<ul class="du">
 							<li>
 								<a href="#">
 									<div class="mt_right_head">好酒狂饮</div>
@@ -529,7 +469,7 @@
 						</a>
 					</div>
 					<div class="zk_right mt_right">
-						<ul>
+						<ul class="du">
 							<li>
 								<a href="#">
 									<div class="mt_right_head">好酒狂饮</div>
@@ -617,7 +557,7 @@
 						</a>
 					</div>
 					<div class="ptj_right mt_right">
-						<ul>
+						<ul class="du">
 							<li>
 								<a href="#">
 									<div class="mt_right_head">买一赠一</div>
@@ -702,7 +642,7 @@
 						</a>
 					</div>
 					<div class="yjrm_right mt_right">
-						<ul>
+						<ul class="du">
 							<li>
 								<a href="#">
 									<div class="mt_right_head">立减100</div>
@@ -739,6 +679,460 @@
 					</div>
 				</div>
 			</div>
+			<!--店长推荐-->
+			<div class="dztj">
+				<div class="dztj_head">
+					<span>店长推荐</span>
+					<div class="dztj_head_right">&#xe65f;</div>
+					<div class="dztj_head_left">&#xe660;</div>
+				</div>
+				<div class="dztj_box">
+					<ul class="">
+						<li class="dztj_li">
+							<a href="#">
+								<img src="img/u.jpg"/>
+								<div class="dztj_box_bt">53度 茅台王子 酱香经典 500ml</div>
+								<div class="dztj_box_jg">566元</div>
+								<div class="dztj_box_rs">99人好评</div>
+							</a>
+						</li>
+						<li class="dztj_li">
+							<a href="#">
+								<img src="img/u.jpg"/>
+								<div class="dztj_box_bt">53度 茅台王子 酱香经典 500ml</div>
+								<div class="dztj_box_jg">566元</div>
+								<div class="dztj_box_rs">99人好评</div>
+							</a>
+						</li>
+						<li class="dztj_li">
+							<a href="#">
+								<img src="img/u.jpg"/>
+								<div class="dztj_box_bt">53度 茅台王子 酱香经典 500ml</div>
+								<div class="dztj_box_jg">566元</div>
+								<div class="dztj_box_rs">99人好评</div>
+							</a>
+						</li>
+						<li class="dztj_li">
+							<a href="#">
+								<img src="img/u.jpg"/>
+								<div class="dztj_box_bt">53度 茅台王子 酱香经典 500ml</div>
+								<div class="dztj_box_jg">566元</div>
+								<div class="dztj_box_rs">99人好评</div>
+							</a>
+						</li>
+						<li class="dztj_li">
+							<a href="#">
+								<img src="img/u.jpg"/>
+								<div class="dztj_box_bt">53度 茅台王子 酱香经典 500ml</div>
+								<div class="dztj_box_jg">566元</div>
+								<div class="dztj_box_rs">99人好评</div>
+							</a>
+						</li>
+						<li class="dztj_li">
+							<a href="#">
+								<img src="img/v.jpg"/>
+								<div class="dztj_box_bt">43度 麦卡伦 18年单一麦芽苏格兰威士忌 700ml</div>
+								<div class="dztj_box_jg">2080 元</div>
+								<div class="dztj_box_rs">8 人好评</div>
+							</a>
+						</li>
+						<li class="dztj_li">
+							<a href="#">
+								<img src="img/v.jpg"/>
+								<div class="dztj_box_bt">43度 麦卡伦 18年单一麦芽苏格兰威士忌 700ml</div>
+								<div class="dztj_box_jg">2080 元</div>
+								<div class="dztj_box_rs">8 人好评</div>
+							</a>
+						</li>
+						<li class="dztj_li">
+							<a href="#">
+								<img src="img/v.jpg"/>
+								<div class="dztj_box_bt">43度 麦卡伦 18年单一麦芽苏格兰威士忌 700ml</div>
+								<div class="dztj_box_jg">2080 元</div>
+								<div class="dztj_box_rs">8 人好评</div>
+							</a>
+						</li>
+						<li class="dztj_li">
+							<a href="#">
+								<img src="img/v.jpg"/>
+								<div class="dztj_box_bt">43度 麦卡伦 18年单一麦芽苏格兰威士忌 700ml</div>
+								<div class="dztj_box_jg">2080 元</div>
+								<div class="dztj_box_rs">8 人好评</div>
+							</a>
+						</li>
+						<li class="dztj_li">
+							<a href="#">
+								<img src="img/v.jpg"/>
+								<div class="dztj_box_bt">43度 麦卡伦 18年单一麦芽苏格兰威士忌 700ml</div>
+								<div class="dztj_box_jg">2080 元</div>
+								<div class="dztj_box_rs">8 人好评</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--酒友热评商品-->
+			<div class="jyrp mt">
+				<div class="jyrp_head mt_head">
+					<span>酒友热评商品</span>
+				</div>
+				<div class="jyrp_box">
+					<ul class="du">
+						<li>
+							<a href="#">
+								<img src="img/a.png"/>
+								<p>同事聚会喝过这个品牌的酒！包装好！看着精美！价格实在！前不久断货了！这次多囤了一些！购酒网价格值得信赖！</p>
+								<span>来自烟锁寒楼的评价</span>
+								<span>53度 珍酒 经典1975（金） 500ml</span>
+								<span>298 元</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/a.png"/>
+								<p>同事聚会喝过这个品牌的酒！包装好！看着精美！价格实在！前不久断货了！这次多囤了一些！购酒网价格值得信赖！</p>
+								<span>来自烟锁寒楼的评价</span>
+								<span>53度 珍酒 经典1975（金） 500ml</span>
+								<span>298 元</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/a.png"/>
+								<p>同事聚会喝过这个品牌的酒！包装好！看着精美！价格实在！前不久断货了！这次多囤了一些！购酒网价格值得信赖！</p>
+								<span>来自烟锁寒楼的评价</span>
+								<span>53度 珍酒 经典1975（金） 500ml</span>
+								<span>298 元</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/a.png"/>
+								<p>同事聚会喝过这个品牌的酒！包装好！看着精美！价格实在！前不久断货了！这次多囤了一些！购酒网价格值得信赖！</p>
+								<span>来自烟锁寒楼的评价</span>
+								<span>53度 珍酒 经典1975（金） 500ml</span>
+								<span>298 元</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--视频-->
+			<div class="sp mt">
+				<div class="sp_head mt_head">
+					<span>视频</span>
+				</div>
+				<div class="sp_box">
+					<ul class="du">
+						<li>
+							<a href="#">
+								<img src="img/m.jpg"/>
+								<span>购酒网（上海）供应链管理总部简介</span>
+								<div class="sp_sj">▶</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/m.jpg"/>
+								<span>购酒网（上海）供应链管理总部简介</span>
+								<div class="sp_sj">▶</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/m.jpg"/>
+								<span>购酒网（上海）供应链管理总部简介</span>
+								<div class="sp_sj">▶</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/m.jpg"/>
+								<span>购酒网（上海）供应链管理总部简介</span>
+								<div class="sp_sj">▶</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+	<!--页脚尾部-->
+	<div id="yj">
+		<div class="yj">
+			<div class="yj_head">
+				<div class="yj_head_dh">
+					<img src="img/dh.png"/>
+				</div>
+				<a class="yj_head_wx" href="#">
+					<img src="img/wx.png"/>
+				</a>
+				<div class="yj_head_ewm">
+					<p>超万平方米仓储体验店<br>上海松江区茂盛路202弄18号<br>客服邮箱：kf@goujiuwang.com<br>扫描二维码，掌握一手优惠资讯</p>
+					<img src="img/ewm.jpg"/>
+				</div>
+			</div>
+			<div class="yj_box">
+				<ul class="yj_box_one">
+					<p>新手指南</p>
+					<li>
+						<a href="#">
+							用户协议
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							常见问题
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							网站购物流程
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							会员制度
+						</a>
+					</li>
+				</ul>
+				
+				<ul>
+					<p>如何付款</p>
+					<li>
+						<a href="#">
+							如何付款
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							发票制度说明
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							电子券说明
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							虚拟账户支付
+						</a>
+					</li>
+				</ul>
+				
+				<ul>
+					<p>配送方式</p>
+					<li>
+						<a href="#">
+							配送收费标准
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							配送时间
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							货到付款支持城市
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							实体加盟服务商
+						</a>
+					</li>
+				</ul>
+				
+				<ul>
+					<p>售后服务</p>
+					<li>
+						<a href="#">
+							如何办理退换货
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							如何退换货
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							联系客服
+						</a>
+					</li>
+				</ul>
+				
+				<ul>
+					<p>关于我们</p>
+					<li>
+						<a href="#">
+							了解购酒网
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							招兵买马
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							联系我们
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							隐私声明
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							友情链接
+						</a>
+					</li>
+				</ul>
+				<dl>
+					<dt>合作共赢</dt>
+					<dd>
+						<a href="#">品牌馆</a>
+					</dd>
+					<dd>
+						<a href="#">大客户采购  new</a>
+					</dd>
+					<dd>
+						<a href="#">网站推广  new</a>
+					</dd>
+					<dd>
+						<a href="#">供应商供货  new</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<img src="img/pz.jpg" alt="" />
+	<div class="footer_lb">
+		<ul>
+			<li>
+				<a href="">	酒水知识</a>
+				<span>|</span>
+				<a href="">购酒论坛</a>
+				<span>|</span>
+				<a href="">茅台</a>
+				<span>|</span>
+				<a href="">中国酒投网</a>
+				<span>|</span>
+				<a href="">9块9包邮</a>
+				<span>|</span>
+				<a href="">酒水加盟</a>
+				<span>|</span>
+				<a href="">品牌加盟网</a>
+				<span>|</span>
+				<a href="">建材加盟</a>
+				<span>|</span>
+				<a href="">没得比导购网</a>
+				<span>|</span>
+				<a href="">烧酒网</a>
+				<span>|</span>
+				<a href="">商机网</a>
+				<span>|</span>
+				<a href="">广州房产信息网</a>
+				<span>|</span>
+				<a href="">代理ip</a>
+				<span>|</span>
+				<a href="">名鞋库</a>
+				<span>|</span>
+				<a href="">隐形眼镜</a>
+				<span>|</span>
+				<a href="">美酒网</a>
+				<span>|</span>
+				<a href="">创业</a>
+				<span>|</span>
+				<a href="">品牌加盟</a>
+				<span>|</span>
+				<a href="">订单农业</a>
+				<span>|</span>
+				<a href="">聊城赶集网</a>
+				<span>|</span>
+				<a href="">广州房产信息网</a>
+				<span>|</span>
+				<a href="">购酒网APP</a>
+				<span>|</span>
+				<a href="">买酒网</a>
+				<span>|</span>
+				<a href="">白酒代理</a>
+				<span>|</span>
+				<a href="">更多</a>
+				<span>|</span>
+			</li>
+		</ul>
+	</div>
+	<p>Copyright® 2009-2018 gjw.com, All Rights Reserved 	购酒网(上海)供应链管理有限公司   版权所有</p>
+	<a href="#"></a>
+	<a href="#"></a>
+	<a href="#"></a>
+	</footer>
+	<!--首页头部-->
+	<div id="home_top">
+		<div class="sytb">
+			<a href="#">
+				<img src="img/sytb.png"/>
+			</a>
+			<form>
+				<input type="text" placeholder="搜索"  class="sytb_txt" id="seek_txt2" autocomplete="off"/>
+				<ul id="sousuo2"></ul>
+				<input type="button" value="搜索" class="sytb_btn" />
+			</form>
+		</div>
+	</div>
+	<!--右侧导航栏-->
+	<div id="yc_nav">
+		<div class="yc_nav">
+			<a class="yc_nav_box yc_nav_d" href="#">
+				<div class="yc_one yc_bg_js">
+					<span class="yc_one_a yc_zt_js">&#xe64f;</span>
+				</div>
+				<div class="yc_two yc_dh_js">
+					<span class="yc_two_a">会员中心</span>
+				</div>
+			</a>
+			
+			<a class="yc_nav_b" href="cart.html">
+				<div class="yc_gwc">
+					<span>&#xe63f;</span>
+					购<br>
+					物<br>
+					车<br>
+				</div>
+			</a>
+			
+			<a class="yc_nav_box yc_nav_d" href="#">
+				<div class="yc_san yc_bg_js">
+					<span class="yc_san_a yc_zt_js">券</span>
+				</div>
+				<div class="yc_si yc_dh_js">
+					<span class="yc_two_a">我的优惠券</span>
+				</div>
+			</a>
+			
+			<a class="yc_nav_box yc_nav_d" href="#">
+				<div class="yc_san yc_bg_js">
+					<span class="yc_san_a yc_zt_js" style="font-family: iconfont;">&#xe643;</span>
+				</div>
+				<div class="yc_si yc_dh_js">
+					<span class="yc_two_a">我的收藏</span>
+				</div>
+			</a>
+			
+			<a class="yc_nav_box yc_nav_d" href="#">
+				<div class="yc_san yc_bg_js">
+					<span class="yc_san_a yc_zt_js" style="font-family: iconfont;">&#xe64c;</span>
+				</div>
+				<div class="yc_si yc_dh_js">
+					<span class="yc_two_a">在线客服</span>
+				</div>
+			</a>
+		</div>
 	</div>
 	</body>
 </html>

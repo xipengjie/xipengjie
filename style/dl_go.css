@@ -1,0 +1,130 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: #000000;
+}
+li{
+	list-style: none;
+}
+em{
+	font-style:normal;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/iconfont.woff') format('woff'),
+  url('../fonts/iconfont.ttf') format('truetype'),
+  url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+	background: url(../img/bg2.gif);
+	animation:bg 150s;
+	-moz-animation:bg 150s linear infinite; /* Firefox */
+	-webkit-animation:bg 150s linear infinite; /* Safari and Chrome */
+	-o-animation:bg 150s ;/* Opera */
+}
+@keyframes bg
+{
+	0%  {background-position:0 0; }
+	
+	100% {background-position:-1000px -1000px;}
+}
+@-moz-keyframes bg /* Firefox */
+{
+	0%   {background-position:0 0; }
+	
+	100% {background-position:-1000px -1000px;}
+}
+
+@-webkit-keyframes bg /* Safari and Chrome */
+{
+	0%   {background-position:0 0; }
+	
+	100% {background-position:-1000px -1000px;}
+}
+@-o-keyframes bg /* Opera */
+{
+	0%   {background-position:0 0; }
+	
+	100% {background-position:-1000px -1000px;}
+}
+#header{
+	width: 100%;
+	height: 89px;
+	background: #FFFFFF;
+	border-bottom: 1px solid #c5c5c5;
+}
+.login_dl em{
+	font-family: iconfont;
+	font-size: 15px;
+	margin-right: 5px;
+}
+#header>a{
+	float: left;
+	margin-left: 160px;
+	margin-top: 24px;
+}
+.login_dl{
+	float: right;
+	margin-right: 125px;
+	margin-top: 35px;
+}
+.login_dl span{
+	font-size: 12px;
+}
+.login_dl a:nth-of-type(1){
+	color: #325e8f;
+	font-size: 12px;
+	margin-right: 30px;
+}
+.login_dl a:nth-of-type(2){
+	font-size: 12px;
+	line-height: 18px;
+	margin-right: 30px;
+}
+.login_dl a:nth-of-type(3){
+	font-size: 12px;
+	color: #cf0404;
+	line-height: 18px;
+}
+.login_dl a:nth-of-type(3) em{
+	color: #cf0404;
+	margin-bottom: 10px;
+}
+
+
+#footer{
+	margin-top: 50px;
+}
+#footer ul{
+		margin-left: 455px;
+}
+#footer ul li{
+	float: left;
+	margin-right: 16px;
+
+}
+#footer ul li a{
+	font-size: 12px;
+	color: #333333;
+}
+#footer>p{
+	float: left;
+	margin-left: 380px;
+	font-size: 12px;
+}
+.f{
+	border-color: #66afe9;
+	box-shadow: 0 0 5px #66afe9;
+}
+.j{
+	border-color: #3c763d;
+}
